@@ -8,4 +8,4 @@ As I mentioned in my blog post, if you use them you should probably add a hole t
 
 ## Automated startup script
 
-This repository also contains the startup script I used. It's very small but maybe you'll find it handy :)
+This repository also contains the [startup script](https://github.com/marjoleintamis/JWST-photo-frame/blob/main/slideshow-script/jwst-script.sh) I used. It's very small but maybe you'll find it handy :)
