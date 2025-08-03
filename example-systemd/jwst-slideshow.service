@@ -1,0 +1,14 @@
+[Unit]
+Description=Systemd service for starting the JWST slideshow
+After=multi-user.target
+
+[Service]  
+Type=exec
+User=user
+ExecStart=/path/to/jwst-slideshow.sh --no-daemon
+RemainAfterExit=true
+Restart=always
+RestartSec=60  
+
+[Install]  
+WantedBy=default.target
