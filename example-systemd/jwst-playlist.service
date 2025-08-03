@@ -1,0 +1,13 @@
+[Unit]
+Description=Play a directory of mp3 files in mplayer
+Wants=multi-user.target
+After=sound.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/mplayer -loop 0 -shuffle -playlist /home/willow/JWST-music/playlist.m3u 
+# Restart=always
+# RestartSec=12
+
+[Install]
+WantedBy=default.target
