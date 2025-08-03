@@ -1,13 +1,16 @@
 [Unit]
-Description=Play a directory of mp3 files in mplayer
-Wants=multi-user.target
-After=sound.target
+Description=Systemd service for starting the JWST playlist in mplayer
+Wants=sound.target
+After=multi-user.target
 
 [Service]
 Type=exec
-ExecStart=/usr/bin/mplayer -loop 0 -shuffle -playlist /home/willow/JWST-music/playlist.m3u 
-# Restart=always
-# RestartSec=12
+User=user
+ExecStart=/path/to/jwst-playlist.sh --no-daemon
+RemainAfterExit=true
+Restart=always
+RestartSec=60
 
 [Install]
 WantedBy=default.target
+
